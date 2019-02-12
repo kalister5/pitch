@@ -1,32 +1,31 @@
 {%extends 'base.html'%}
 
     {% block content%}
-        <div class="container" style="background-color: #404040; height:300px; box-shadow: 5px 5px 10px 5px;">
-            <h1 style="color:aliceblue; text-align: center;">welcome to pitches</h1>
-            <h3 style="color:aliceblue; text-align: center;">Select A  Category And Make A Pitch</h3>
-            <h3 style="color:aliceblue; text-align: center;"> contact me: lankas.aurelia@gmail.com /+254702781830</h3>
-            <div class="image" style="position: relative; left: 40%;"><img src="https://www.magfedpbuk.com/wp-content/uploads/2017/02/twitter-icon.png">...<img  src="http://www.techulator.com/attachments/Resources/6163-222224-instagram.png">...<img  src="https://realtyna.com/wp-content/uploads/2018/06/facebook-slider-icon.png"></div>
+        <div class="container">
+            <h1 style="text-align: center;">welcome to pitches</h1>
+            <h3 style="text-align: center;">Select A  Category And Make A Pitch</h3>
+
+
             <br>
             <div class="row">
                 <div class="col-md-4">
-                    <div class="card"style="background-color: #009999; height:200px; text-align: centre; box-shadow: 5px 5px 10px 5px;">
-            <a href="{{url_for('main.business')}}"style="color:aliceblue; align-content:center;margin-left;top:50px;"><strong>Bussiness Category</strong></a>
+                    <div class="card"style="height:200px; text-align: centre;">
+            <a href="{{url_for('main.business')}}"style=" align-content:center;margin-left;top:50px;"><strong>Bussiness Category</strong></a>
             </div>
                     </div>
-                <div class="col-md-4"> 
-                <div class="card"style="background-color: #009999; height:200px; text-align: centre;position:relative; box-shadow: 5px 5px 10px 5px;">  
-            <a href="{{url_for('main.sales')}}"style="color:aliceblue; align-content:center;"><strong>Sales Category</strong></a>
+                <div class="col-md-4">
+                <div class="card"style="height:200px; text-align: centre;position:relative;">
+            <a href="{{url_for('main.sales')}}"style="align-content:center;"><strong>Sales Category</strong></a>
                 </div>
                 </div>
                 <div class="col-md-4">
-                <div class="card"style="background-color: #009999; height:200px; text-align: centre;text-size: 50px; box-shadow: 5px 5px 10px 5px;">  
-            <a href="{{url_for('main.interview')}}" style="color:aliceblue; align-content:center;"><strong>Interview Category</strong></a>
-            </div> 
+                <div class="card"style="height:200px; text-align: centre;text-size: 50px;">
+            <a href="{{url_for('main.interview')}}" style=" align-content:center;"><strong>Interview Category</strong></a>
             </div>
-            
+            </div>
 
-            
+
+
     </div>
 </div>
         {% endblock %}
-    
