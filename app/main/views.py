@@ -39,7 +39,7 @@ def update_profile(uname):
 
         db.session.add(user)
         db.session.commit()
-background-color:#FFCCFF; text-aligbackground-color:#FFCCFF; text-align: center;n: center;
+
         return redirect(url_for('.profile',uname=user.username))
 
     return render_template('profile/update.html',form =form)

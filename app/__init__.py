@@ -9,29 +9,11 @@ from flask_mail import Mail
 login_manager = LoginManager()
 login_manager.session_protection = 'strong'
 login_manager.login_view = 'auth.login'
-        self.assertTrue(len(Pitch.query.all()) >0)
-
-    def test_get_pitch_by_id(self):
-        self.new_pitch.save_pitch()
-        got_pitch = Pitch.get_pitches(12345)
-        self.assertTrue(len(got_pitch) > 0)
 
 bootstrap = Bootstrap()
 db = SQLAlchemy()
-mail = Mail()        self.assertTrue(len(Pitch.query.all()) >0)
-
-    def test_get_pitch_by_id(self):
-        self.new_pitch.save_pitch()
-        got_pitch = Pitch.get_pitches(12345)
-        self.assertTrue(len(got_pitch) > 0)
-
+mail = Mail()
 photos = UploadSet('photos',IMAGES)
-        self.assertTrue(len(Pitch.query.all()) >0)
-
-    def test_get_pitch_by_id(self):
-        self.new_pitch.save_pitch()
-        got_pitch = Pitch.get_pitches(12345)
-        self.assertTrue(len(got_pitch) > 0)
 
 def create_app(config_name):
     app = Flask(__name__)
