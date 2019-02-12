@@ -2,24 +2,25 @@
 
     {% block content%}
         <div class="container">
-            <h1 style="text-align: center;">welcome to pitches</h1>
-            <h3 style="text-align: center;">Select A  Category And Make A Pitch</h3>
+            <h1  style="text-align: center; text-decoration:underline; color:blue; text-transform: capitalize;">welcome to pitches</h1>
+            <h3 style="text-align: center; text-decoration:underline; color:blue; text-transform: capitalize;">Select A  Category And Make A Pitch</h3>
+            <p>In life, you only have 60 seconds to impress someone. 1 minute can make or break you. How do we make sure that you use your 1 minute to actually say something meaningful?. The pitches are organized by category,and you can select a category and make a pitch .</p>
 
 
             <br>
             <div class="row">
                 <div class="col-md-4">
                     <div class="card"style="height:200px; text-align: centre;">
-            <a href="{{url_for('main.business')}}"style=" align-content:center;margin-left;top:50px;"><strong>Bussiness Category</strong></a>
+            <a href="{{url_for('main.business')}}"style="padding-left:120px; align-content:center;margin-left;top:50px;"><strong>Business Category</strong></a>
             </div>
                     </div>
                 <div class="col-md-4">
-                <div class="card"style="height:200px; text-align: centre;position:relative;">
+                <div class="card"style=" padding-left:120px; height:200px; text-align: centre;position:relative;">
             <a href="{{url_for('main.sales')}}"style="align-content:center;"><strong>Sales Category</strong></a>
                 </div>
                 </div>
                 <div class="col-md-4">
-                <div class="card"style="height:200px; text-align: centre;text-size: 50px;">
+                <div class="card"style=" padding-left:120px; height:200px; text-align: centre;text-size: 50px;">
             <a href="{{url_for('main.interview')}}" style=" align-content:center;"><strong>Interview Category</strong></a>
             </div>
             </div>

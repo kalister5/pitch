@@ -5,15 +5,15 @@ from app import db
 #the setup method creates an instances of our user
 class UserModelTest(unittest.TestCase):
     def setUp(self):
-        self.new_user = User(username = 'naiyoma',password = 'lankas', email = 'lankas@gmail.com')
-        
-        
+        self.new_user = User(username = 'hazard',password = '1234', email = 'zainkalister@gmail.com')
+
+
     #saving my users to my database
     def save_user(self):
         db.session.add(self.new_user)
         db.session.commit()
 
-    # this ascertains that our password is being hashed or not  
+    # this ascertains that our password is being hashed or not
     def test_password_setter(self):
         self.assertTrue(self.new_user.pass_secure is not None)
 
@@ -24,4 +24,4 @@ class UserModelTest(unittest.TestCase):
 
     #tests that our password is being hashed
     def test_password_verification(self):
-        self.assertTrue(self.new_user.verify_password('lankas'))        
+        self.assertTrue(self.new_user.verify_password('1234'))        
