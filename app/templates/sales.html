@@ -1,0 +1,23 @@
+{% extends 'base.html'%}
+
+# imported form flask bootstrap allowing rendering of forms
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block content %}
+{% for message in get_flashed_messages() %}
+{{message}}
+{% endfor%}
+<h1>welcome to pitch</h1>
+
+<div class="container">
+    <a href="{{url_for('main.sales')}}">sales category</a>
+</div>
+{{ wtf.quick_form(pitch_form) }}
+
+{% for category in sales %}
+<p>{{category.title}}</p>
+<p>{{category.category}}</p>
+<p>{{category.posted}}</p>
+
+{% endfor %}
+{% endblock%}

@@ -1,0 +1,18 @@
+{% extends 'base.html'%}
+
+# imported form flask bootstrap allowing rendering of forms
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block content %}
+
+<h1>welcomr to pitch</h1>
+
+<div class="container">
+    <a href="{{url_for('main.category')}}">category</a>
+</div>
+{{ wtf.quick_form(pitch_form) }}
+{% for pitch in all %}
+<p>{{pitch.title}}</p>
+<p>{{pitch.name}}</p>
+{% endfor %}
+{% endblock%}
