@@ -39,7 +39,7 @@ def update_profile(uname):
 
         db.session.add(user)
         db.session.commit()
-
+background-color:#FFCCFF; text-aligbackground-color:#FFCCFF; text-align: center;n: center;
         return redirect(url_for('.profile',uname=user.username))
 
     return render_template('profile/update.html',form =form)
@@ -62,20 +62,20 @@ def update_pic(uname):
 def pitch():
     pitch_form = PitchForm()
     pitchform1 = Pitch(name = pitch_form.title.data,description=pitch_form.title.data)
-    pitchform1. save_pitch()       
+    pitchform1. save_pitch()
     print('wow')
     allpitches = Pitch.query.all()
     print(all)
     return render_template('pitch.html',pitch_form=pitch_form,Pitch=pitch,all=allpitches)
-   
-        
+
+
 # #routing for pitches and categories
 # @main.route('/pitch', methods=['GET','POST'])
 # @login_required
 # def category():
 #     category_form = CategoryForm()
 #     categoryform1 = Category(name = category_form.title.data,user=current_user)
-#     categoryform1. save_category()       
+#     categoryform1. save_category()
 #     print('www')g
 
 
@@ -86,7 +86,7 @@ def pitch():
 @login_required
 def business():
     pitch_form=PitchForm()
-    if pitch_form.validate_on_submit():        
+    if pitch_form.validate_on_submit():
         business = Pitch(category=pitch_form.category.data,title = pitch_form.title.data)
         db.session.add(business)
         db.session.commit()
@@ -124,19 +124,10 @@ def comment(id):
 
     comment_form=CommentForm()
     if comment_form.validate_on_submit():
-        
+
         new_comment = Comment(description=comment_form.description.data,pitch_id=id,user=current_user)
         db.session.add(new_comment)
         db.session.commit()
     comments = Comment.query.filter_by(pitch_id=id)
-    
-    return render_template('comment.html',comments=comments,comment_form=comment_form)    
 
-
-  
-
-
-   
-    
-    
-
+    return render_template('comment.html',comments=comments,comment_form=comment_form)

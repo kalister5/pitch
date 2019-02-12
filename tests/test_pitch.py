@@ -16,7 +16,7 @@ class PitchModelTest(unittest.TestCase):
         self.assertEquals(self.new_pitch.title,'movie')
         self.assertEquals(self.new_pitch.description,'moviereview')
         self.assertEquals(self.new_pitch.category, 'technology')
-        # self.assertEquals(self.new_pitch.user,self.user_naiyoma)
+        # self.assertEquals(self.new_pitch.user,self.user_hazard)
 
     def test_save_pitch(self):
         self.new_pitch.save_pitch()
