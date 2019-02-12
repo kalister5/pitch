@@ -4,7 +4,7 @@ from app import db
 
 class CommentModelTest(unittest.TestCase):
     def setUp(self):
-        self.user_hazard = User(username = 'hazard',password = '1234')
+        self.user_hazard = User(username = 'hazard',password = 'kante')
         self.new_comment = Comment(description='comments',user = self.user_hazard)
 
     # def tearDown(self):
